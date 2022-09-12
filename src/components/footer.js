@@ -19,8 +19,8 @@ const Footer = props => (
       From <a href="https://senthil.learntosolveit.com" target="_blank" rel="noopener noreferrer">
     Senthil Kumaran.</a>
     See also <span role="img" aria-label="pointer">👉</span>{' '}
-      <a href="https://eksctl-explorer.learntosolveit.com/" target="_blank" rel="noopener noreferrer">kubectl-explorer,</a>
-      <a href="https://eksctl-explorer.learntosolveit.com/" target="_blank" rel="noopener noreferrer">aws-explorer</a>
+      <a href="https://kubectl.learntosolveit.com/" target="_blank" rel="noopener noreferrer">kubectl-explorer,</a>
+      <a href="https://aws.learntosolveit.com/" target="_blank" rel="noopener noreferrer">aws-explorer</a>
     </p>
 
     <p className="footer__copyright dark-white">
