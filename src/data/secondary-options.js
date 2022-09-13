@@ -25,6 +25,12 @@ export const secondaryOptions = {
             label: 'an iam identity mapping',
         },
     ],
+    list : [
+        {
+            value: 'list-clusters',
+            label: 'clusters',
+        },
+    ],
     enable_logging : [
         {
             value: 'enable-all-logs',

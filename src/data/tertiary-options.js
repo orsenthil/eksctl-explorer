@@ -61,4 +61,12 @@ export const tertiaryOptions = {
         },
     ],
 
+    'list-clusters': [
+        {
+            value: 'list-clusters-option',
+            label: 'list clusters',
+            usage: 'eksctl get clusters',
+            nb: 'Lists all EKS clusters in the current AWS account and region.\n\nYou can narrow down the region with --region flag.\n\nYou can also use the AWS CLI to list clusters: aws eks list-clusters'
+        }
+    ],
 };
