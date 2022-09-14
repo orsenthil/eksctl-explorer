@@ -23,7 +23,14 @@ export const tertiaryOptions = {
         },
 
     ],
-
+    'delete_resource_cluster': [
+        {
+            value: 'delete-resource-cluster',
+            label: 'a cluster with all of its resources',
+            usage: 'eksctl delete cluster --name $CLUSTER_NAME',
+            nb: 'Deletes a cluster and all of its resources.'
+        },
+    ],
     'fargate-profile': [
         {
             value: 'fargate-profile-option',

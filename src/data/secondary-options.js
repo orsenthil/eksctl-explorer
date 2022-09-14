@@ -25,6 +25,12 @@ export const secondaryOptions = {
             label: 'an iam identity mapping',
         },
     ],
+    delete_resource : [
+        {
+            value: 'delete_resource_cluster',
+            label: 'a cluster',
+        },
+    ],
     list : [
         {
             value: 'list-clusters',
@@ -40,7 +46,7 @@ export const secondaryOptions = {
             value: 'associate-cluster',
             label: 'with default KUBECONFIG file',
             usage: 'aws eks update-kubeconfig --name $CLUSTER_NAME',
-            nb: 'This will update your default KUBECONFIG file.\n\n If you have multiple clusters, you can use the --kubeconfig flag to specify a different file.',
+            nb: 'This will update your default KUBECONFIG file.\n\nIf you have multiple clusters, you can use the --kubeconfig flag to specify a different file.',
         }
 
     ],
