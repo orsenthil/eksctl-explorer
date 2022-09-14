@@ -30,6 +30,10 @@ export const secondaryOptions = {
             value: 'list-clusters',
             label: 'clusters',
         },
+        {
+            value: 'list-addons',
+            label: 'addons installed in my cluster',
+        }
     ],
     enable_logging : [
         {

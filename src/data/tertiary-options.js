@@ -69,4 +69,12 @@ export const tertiaryOptions = {
             nb: 'Lists all EKS clusters in the current AWS account and region.\n\nYou can narrow down the region with --region flag.\n\nYou can also use the AWS CLI to list clusters: aws eks list-clusters'
         }
     ],
+    'list-addons': [
+        {
+            value: 'list-addons-option',
+            label: 'list addons',
+            usage: 'eksctl get addons --cluster $CLUSTER_NAME',
+            nb: 'Lists all addons installed on a cluster.\n\nYou can also use the AWS CLI to list addons: aws eks list-addons --cluster-name $CLUSTER_NAME'
+        }
+    ]
 };
