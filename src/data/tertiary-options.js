@@ -12,6 +12,12 @@ export const tertiaryOptions = {
             usage: 'eksctl create cluster --dry-run',
             nb: 'Prints eksctl cluster manifest yaml to stdout without creating the cluster.'
         },
+        {
+            value: 'default-cluster-with-ssh',
+            label: 'with a new ssh access',
+            usage: 'eksctl create cluster --ssh-access',
+            nb: 'Creates an EKS cluster with two managed nodes.\n\nKubernetes API endpoint access will use default of {publicAccess=true, privateAccess=false} for cluster.\n\nCloudWatch logging is not enabled.\n\nSSH access is enabled for the cluster.'
+        },
     ],
 
     'addon': [
