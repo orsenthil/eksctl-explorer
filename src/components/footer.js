@@ -15,17 +15,15 @@ const Footer = props => (
       </a>
     </div>
     <p className="footer__copyright dark-white">
-      Made with <span>❤</span> by{' '}
-      From <a href="https://senthil.learntosolveit.com" target="_blank" rel="noopener noreferrer">
-    Senthil Kumaran.</a>
-    See also <span role="img" aria-label="pointer">👉</span>{' '}
+            From <a href="https://senthil.learntosolveit.com" target="_blank" rel="noopener noreferrer">Senthil Kumaran</a> with <span>❤</span>. 
+    Also <span role="img" aria-label="pointer">👉</span>
       <a href="https://kubectl.learntosolveit.com/" target="_blank" rel="noopener noreferrer">kubectl-explorer,</a>
       <a href="https://aws.learntosolveit.com/" target="_blank" rel="noopener noreferrer">aws-explorer</a>
     </p>
 
     <p className="footer__copyright dark-white">
-      <span role="img" aria-label="thank you">🙏</span> Thanks to parent projects {' '}
-      <a href="https://gitexplorer.com/" target="_blank" rel="noopener noreferrer"> GitExplorer</a>, 
+      <span role="img" aria-label="thank you">🙏</span> Thanks to{' '}
+      <a href="https://gitexplorer.com/" target="_blank" rel="noopener noreferrer"> GitExplorer</a>, and{' '}
       <a href="https://objectexplorer.netlify.app/" target="_blank" rel="noopener noreferrer"> Javascript Object Explorer.</a>
     </p>
 
