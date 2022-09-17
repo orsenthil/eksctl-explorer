@@ -17,10 +17,10 @@ const Footer = props => (
     <p className="footer__copyright dark-white">
     By <a href="https://senthil.learntosolveit.com" target="_blank" rel="noopener noreferrer">Senthil Kumaran</a>{' '}
     <span role="img" aria-label="pointer">👉</span>
-    See Also 
+    See Also{' '}
       <a href="https://kubectl.learntosolveit.com/" target="_blank" rel="noopener noreferrer">kubectl-explorer</a>, {' '}
       <a href="https://aws.learntosolveit.com/" target="_blank" rel="noopener noreferrer">aws-explorer</a>, {' '} and {' '}
-      <a href="https://www.learntosolveit.com" target="_blank" rel="noopener noreferrer">Learn To Solve it</a>
+      <a href="https://www.learntosolveit.com/" target="_blank" rel="noopener noreferrer">Learn To Solve it</a>
     </p>
 
     <p className="footer__copyright dark-white">
