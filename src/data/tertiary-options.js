@@ -48,7 +48,7 @@ export const tertiaryOptions = {
         {
             value: 'default-cluster-with-5-nodes-ssh-access-and-oidc',
             label: 'with 5 nodes, ssh access and oidc.',
-            usage: 'eksctl create cluster --nodes 5 --ssh-access --enable-oidc',
+            usage: 'eksctl create cluster --nodes 5 --ssh-access --with-oidc',
             nb: 'Creates an EKS cluster with five managed nodes.\n\nKubernetes API endpoint access will use default of {publicAccess=true, privateAccess=false} for cluster.\n\nCloudWatch logging is not enabled.\n\nSSH access is enabled for the cluster.\n\nOIDC is enabled for the cluster.'
         },
     ],
