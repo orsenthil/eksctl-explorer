@@ -15,16 +15,21 @@ const Footer = props => (
       </a>
     </div>
     <p className="footer__copyright dark-white">
-            From <a href="https://senthil.learntosolveit.com" target="_blank" rel="noopener noreferrer">Senthil Kumaran</a> with <span>❤</span>. 
-    Also <span role="img" aria-label="pointer">👉</span>
-      <a href="https://kubectl.learntosolveit.com/" target="_blank" rel="noopener noreferrer">kubectl-explorer,</a>
+    By <a href="https://senthil.learntosolveit.com" target="_blank" rel="noopener noreferrer">Senthil Kumaran</a>
+    See Also 
+    <span role="img" aria-label="pointer">👉</span>
+      <a href="https://kubectl.learntosolveit.com/" target="_blank" rel="noopener noreferrer">kubectl-explorer</a>
+    <span role="img" aria-label="pointer">👉</span>
       <a href="https://aws.learntosolveit.com/" target="_blank" rel="noopener noreferrer">aws-explorer</a>
+    <span role="img" aria-label="pointer">👉</span>
+        <a href="https://www.learntosolveit.com" target="_blank" rel="noopener noreferrer">Learn To Solve it</a>
     </p>
 
     <p className="footer__copyright dark-white">
-      <span role="img" aria-label="thank you">🙏</span> Thanks to{' '}
+      Thanks to{' '}
       <a href="https://gitexplorer.com/" target="_blank" rel="noopener noreferrer"> GitExplorer</a>, and{' '}
       <a href="https://objectexplorer.netlify.app/" target="_blank" rel="noopener noreferrer"> Javascript Object Explorer.</a>
+      <span role="img" aria-label="thank you">🙏</span> 
     </p>
 
   </footer>
