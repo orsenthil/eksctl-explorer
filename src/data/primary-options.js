@@ -1,5 +1,6 @@
 const options = [
     { value: 'create', label: 'create' },
+    { value: 'install', label: 'install' },
     { value: 'list', label: 'list' },
     { value: 'delete_resource', label: 'delete' },
     { value: 'associate_cluster', label: 'associate my cluster with kubectl' },

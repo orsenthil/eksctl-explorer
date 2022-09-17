@@ -1,4 +1,10 @@
 export const secondaryOptions = {
+    install: [
+        {
+            value: 'install-eksctl',
+            label: 'eksctl',
+        },
+    ],
     create : [
         {
             value: 'default-cluster',

@@ -1,4 +1,31 @@
 export const tertiaryOptions = {
+    'install-eksctl': [
+        {
+            value: 'install-eksctl-linux',
+            label: 'On linux',
+            usage: 'curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp\nsudo mv /tmp/eksctl /usr/local/bin',
+            nb: 'This will download the latest release of eksctl and install it in /usr/local/bin.',
+        },
+        {
+            value: 'install-eksctl-macos',
+            label: 'On macOS',
+            usage: 'brew tap weaveworks/tap\nbrew install weaveworks/tap/eksctl',
+            nb: 'This will download the latest release of eksctl using brew and install it in /usr/local/bin.',
+        },
+        {
+            value: 'install-eksctl-windows',
+            label: 'On Windows',
+            usage: 'choco install eksctl',
+            nb: 'This will download the latest release of eksctl using choco and install it in C:\\ProgramData\\chocolatey\\bin.',
+        },
+        {
+            value: 'install-eksctl-from-source',
+            label: 'From source',
+            usage: 'git clone https://github.com/weaveworks/eksctl.git\ncd eksctl\nmake install-build-deps\nmake build',
+            nb: 'This will clone the latest source of eksctl and create a binary ./eksctl in the current directory.\nYou need to have a working go environment.',
+        },
+
+    ],
     'default-cluster': [
         {
             value: 'default-cluster-option',
