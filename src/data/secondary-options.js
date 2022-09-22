@@ -47,15 +47,6 @@ export const secondaryOptions = {
             label: 'addons installed in my cluster',
         }
     ],
-    associate_cluster : [
-        {
-            value: 'associate-cluster',
-            label: 'with default KUBECONFIG file',
-            usage: 'aws eks update-kubeconfig --name $CLUSTER_NAME',
-            nb: 'This will update your default KUBECONFIG file.\n\nIf you have multiple clusters, you can use the --kubeconfig flag to specify a different file.',
-        }
-
-    ],
     enable_logging : [
         {
             value: 'enable-all-logs',
