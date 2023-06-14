@@ -64,7 +64,7 @@ export const tertiaryOptions = {
             label: 'windows cluster using a config.',
             usage: 'eksctl create cluster -f cluster.yaml',
             nb: 'creates a cluster using a config file.',
-            filecontent: '"# cluster.yaml\\n# An example of ClusterConfig containing Windows and Linux node groups to support Windows workloads\\n---\\napiVersion: eksctl.io/v1alpha5\\nkind: ClusterConfig\\n\\nmetadata:\\n  name: floral-unicorn-1686245635\\n  region: us-west-2\\n  version: \\"1.27\\"\\n\\nnodeGroups:\\n  - name: windows-ng\\n    amiFamily: WindowsServer2019FullContainer\\n    minSize: 2\\n    maxSize: 3\\n\\nmanagedNodeGroups:\\n  - name: linux-ng\\n    instanceType: t2.large\\n    minSize: 2\\n    maxSize: 3\\n\\n  - name: windows-managed-ng\\n    amiFamily: WindowsServer2019FullContainer\\n    minSize: 2\\n    maxSize: 3"',
+            filecontent: '# cluster.yaml\n# An example of ClusterConfig containing Windows and Linux node groups to support Windows workloads\napiVersion: eksctl.io/v1alpha5\nkind: ClusterConfig\nmetadata:\n  name: floral-unicorn-1686245635\n  region: us-west-2\n  version: "1.27"\nnodeGroups:\n  - name: windows-ng\n    amiFamily: WindowsServer2019FullContainer\n    minSize: 2\n    maxSize: 3\nmanagedNodeGroups:\n  - name: linux-ng\n    instanceType: t2.large\n    minSize: 2\n    maxSize: 3\n  - name: windows-managed-ng\n    amiFamily: WindowsServer2019FullContainer\n    minSize: 2\n    maxSize: 3\n',
         }
     ],
     'addon': [
