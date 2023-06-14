@@ -57,7 +57,7 @@ class App extends Component {
 
   onSecondChange = (selectedOption) => {
     if (selectedOption.usage) {
-      this.setState({ nb: '', usage: '' }, () => {
+      this.setState({ nb: '', usage: '', filecontent: '' }, () => {
         this.setState({
           secondOption: selectedOption,
           showThird: false,
@@ -90,7 +90,7 @@ class App extends Component {
   };
 
   onThirdChange = (selectedOption) => {
-    this.setState({ nb: '', usage: '' }, () => {
+    this.setState({ nb: '', usage: '', filecontent: '' }, () => {
       this.setState({
         thirdOption: selectedOption,
         nb: selectedOption.nb,
@@ -242,6 +242,7 @@ class App extends Component {
                       </div>
                     </div>
                   ) : null}
+
                   {filecontent ? (
                       <div className="board__group board__group--2">
                         <h2 className="board__title  dark-white">File Content</h2>
@@ -252,6 +253,7 @@ class App extends Component {
                         </div>
                       </div>
                   ) : null}
+
                 </div>
               </div>
             </div>
