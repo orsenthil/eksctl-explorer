@@ -81,3 +81,7 @@ show: [
   ]
   ```
 4. Once you are done, add, commit, push and create a PR to Master.
+
+### Yaml to string content
+
+cat windows-ng.yaml | yq eval  | awk '{printf "%s\\n", $0}'
