@@ -44,6 +44,7 @@ class App extends Component {
         secondOption: null,
         showThird: false,
         nb: '',
+        filecontent: '',
         usage: ''
       });
     } else if (optionsSecond[selectedOption.value].length === 1) {
@@ -62,6 +63,7 @@ class App extends Component {
           showThird: false,
           nb: selectedOption.nb,
           usage: selectedOption.usage,
+          filecontent: selectedOption.filecontent,
           thirdOption: null
         });
       });
@@ -71,6 +73,7 @@ class App extends Component {
         showThird: true,
         thirdOption: null,
         nb: '',
+        filecontent: '',
         usage: ''
       });
       this.onThirdChange(optionsThird[selectedOption.value][0]);
@@ -80,6 +83,7 @@ class App extends Component {
         showThird: true,
         thirdOption: null,
         nb: '',
+        filecontent: '',
         usage: ''
       });
     }
@@ -90,7 +94,8 @@ class App extends Component {
       this.setState({
         thirdOption: selectedOption,
         nb: selectedOption.nb,
-        usage: selectedOption.usage
+        usage: selectedOption.usage,
+        filecontent: selectedOption.filecontent
       });
     });
   };
