@@ -58,7 +58,15 @@ export const tertiaryOptions = {
             nb: 'Creates an EKS cluster with five managed nodes.\n\nKubernetes API endpoint access will use default of {publicAccess=true, privateAccess=false} for cluster.\n\nCloudWatch logging is not enabled.\n\nSSH access is enabled for the cluster.\n\nOIDC is enabled for the cluster.\n\neksctl-managed nodegroups are enabled for the cluster. A custom node type of c5.xlarge is used.'
         }
     ],
-
+    'custom-windows-cluster': [
+        {
+            value: 'custom-windows-cluster-option',
+            label: 'windows cluster using a config.',
+            usage: 'eksctl create cluster -f cluster.yaml',
+            nb: 'creates a cluster using a config file.',
+            filecontent: '# cluster.yaml # An example of ClusterConfig containing Windows and Linux node groups to support Windows workloads --- apiVersion: eksctl.io/v1alpha5 kind: ClusterConfig metadata: name: floral-unicorn-1686245635 region: us-west-2 version: "1.27" nodeGroups: - name: windows-ng amiFamily: WindowsServer2019FullContainer minSize: 2 maxSize: 3 managedNodeGroups: - name: linux-ng instanceType: t2.large minSize: 2 maxSize: 3 - name: windows-managed-ng amiFamily: WindowsServer2019FullContainer minSize: 2 maxSize: 3',
+        }
+    ],
     'addon': [
         {
             value: 'create-addon',

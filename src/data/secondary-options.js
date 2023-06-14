@@ -30,6 +30,10 @@ export const secondaryOptions = {
             value: 'iamidentitymapping',
             label: 'an iam identity mapping',
         },
+        {
+            value: 'custom-windows-cluster',
+            label: 'a custom windows cluster',
+        }
     ],
     delete_resource : [
         {

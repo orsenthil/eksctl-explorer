@@ -19,6 +19,7 @@ class App extends Component {
       showThird: false,
       thirdOption: null,
       nb: '',
+      filecontent: '',
       usage: '',
       copied: false
     };
@@ -136,6 +137,7 @@ class App extends Component {
       showThird,
       fastType,
       nb,
+      filecontent,
       usage,
       copied
     } = this.state;
@@ -234,6 +236,16 @@ class App extends Component {
                         </pre>
                       </div>
                     </div>
+                  ) : null}
+                  {filecontent ? (
+                      <div className="board__group board__group--2">
+                        <h2 className="board__title  dark-white">File Content</h2>
+                        <div className="board board--2">
+                        <pre>
+                            {filecontent}
+                        </pre>
+                        </div>
+                      </div>
                   ) : null}
                 </div>
               </div>
