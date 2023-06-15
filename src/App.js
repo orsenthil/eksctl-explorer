@@ -235,9 +235,7 @@ class App extends Component {
                       <h2 className="board__title  dark-white">Note</h2>
                       <div className="board board--2">
                         <pre>
-                          <Typist avgTypingDelay={avgTypingDelay} cursor={{ show: false }}>
                             {nb}
-                          </Typist>
                         </pre>
                       </div>
                     </div>
@@ -245,7 +243,7 @@ class App extends Component {
 
                   {filecontent ? (
                       <div className="board__group board__group--2">
-                        <h2 className="board__title  dark-white">File Content</h2>
+                        <h2 className="board__title  dark-white">File Contents</h2>
                         <div className="board board--2">
                         <pre>
                             {filecontent}
