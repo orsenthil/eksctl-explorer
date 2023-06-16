@@ -541,7 +541,7 @@ body {
   right: 50%;
   text-align: center;
   text-transform: capitalize;
-  transform: translateX(50%);
+  transform: translateX(20%);
   transition: all 0.3s; }
 .copy_contents_popover.show {
   opacity: 1;
@@ -553,7 +553,7 @@ body {
   display: block;
   left: 50%;
   position: absolute;
-  transform: translateX(-50%); }
+  transform: translateX(-20%); }
 
 .toggle {
   display: flex;
