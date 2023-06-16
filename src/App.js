@@ -269,9 +269,9 @@ class App extends Component {
                             {filecontent}
                         </pre>
                           {filecontent.length ? (
-                              <div className="copy">
-                                  <span className={`copy__popover ${copied ? 'show' : ''}`}>
-                                    command copied
+                              <div className="copy2">
+                                  <span className={`copy2__popover ${copied ? 'show' : ''}`}>
+                                    file contents copied
                                   </span>
                                 <img
                                     className="copy__image"
