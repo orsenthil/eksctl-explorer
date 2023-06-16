@@ -531,7 +531,7 @@ body {
 .copy_contents_popover {
   background: #fff;
   border-radius: 0.3rem;
-  bottom: 10%;
+  bottom: 50%;
   color: #20252d !important;
   display: inline-block;
   font-size: 1rem;
@@ -545,7 +545,7 @@ body {
   transition: all 0.3s; }
 .copy_contents_popover.show {
   opacity: 1;
-  bottom: 50%; }
+  bottom: 100%; }
 .copy_contents_popover::after {
   border: 5px transparent solid;
   border-top-color: #fff;
