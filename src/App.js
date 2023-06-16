@@ -112,6 +112,16 @@ class App extends Component {
     });
   };
 
+  onFileContentsCopy = () => {
+    this.setState({ filecontent_copied: true }, () => {
+      if (this.timeout) {
+        clearInterval(this.timeout);
+      }
+      this.timeout = setTimeout(() => {
+        this.setState({ filecontent_copied: false });
+      }, 1000);
+    });
+  };
   copyUsage = () => {
     const el = document.createElement('textarea');
     el.value = this.state.usage;
@@ -146,7 +156,7 @@ class App extends Component {
     el.select();
     document.execCommand('copy');
     document.body.removeChild(el);
-    this.onCopy();
+    this.onFileContentsCopy();
 
     if (selected) {
       document.getSelection().removeAllRanges();
