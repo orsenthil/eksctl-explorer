@@ -531,7 +531,7 @@ body {
 .copy_contents_popover {
   background: #fff;
   border-radius: 0.3rem;
-  bottom: 50%;
+  bottom: 10%;
   color: #20252d !important;
   display: inline-block;
   font-size: 1rem;
@@ -541,11 +541,11 @@ body {
   right: 50%;
   text-align: center;
   text-transform: capitalize;
-  transform: translateX(20%);
+  transform: translateX(50%);
   transition: all 0.3s; }
 .copy_contents_popover.show {
   opacity: 1;
-  bottom: 150%; }
+  bottom: 50%; }
 .copy_contents_popover::after {
   border: 5px transparent solid;
   border-top-color: #fff;
@@ -553,7 +553,7 @@ body {
   display: block;
   left: 50%;
   position: absolute;
-  transform: translateX(-20%); }
+  transform: translateX(-50%); }
 
 .toggle {
   display: flex;
