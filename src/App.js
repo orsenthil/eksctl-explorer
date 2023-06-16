@@ -236,12 +236,12 @@ class App extends Component {
                       )}
                     </pre>
                     {usage.length ? (
-                      <div className="copy">
-                        <span className={`copy__popover ${copied ? 'show' : ''}`}>
+                      <div className="copy_contents">
+                        <span className={`copy_contents_popover ${copied ? 'show' : ''}`}>
                           command copied
                         </span>
                         <img
-                          className="copy__image"
+                          className="copy_contents_image"
                           onClick={this.copyUsage}
                           src={clipboard}
                           alt="Clipboard"
