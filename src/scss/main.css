@@ -536,9 +536,9 @@ body {
   display: inline-block;
   font-size: 1rem;
   padding: 0.2rem 0.5rem;
-  position: absolute;
+  position: relative;
   opacity: 0;
-  right: 50%;
+  right: 20%;
   text-align: center;
   text-transform: capitalize;
   transform: translateX(50%);
@@ -552,7 +552,7 @@ body {
   content: '';
   display: block;
   left: 50%;
-  position: absolute;
+  position: relative;
   transform: translateX(-50%); }
 
 .toggle {
