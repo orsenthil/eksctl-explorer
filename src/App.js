@@ -132,6 +132,26 @@ class App extends Component {
     }
   };
 
+  copyFileContents = () => {
+    const el = document.createElement('textarea');
+    el.value = this.state.filecontent;
+    el.setAttribute('readonly', '');
+    el.style.position = 'absolute';
+    el.style.left = '-9999px';
+    document.body.appendChild(el);
+    const selected = document.getSelection().rangeCount > 0
+        ? document.getSelection().getRangeAt(0)
+        : false;
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+    this.onCopy();
+
+    if (selected) {
+      document.getSelection().removeAllRanges();
+      document.getSelection().addRange(selected);
+    }
+  };
   render() {
     const {
       dark,
@@ -255,7 +275,7 @@ class App extends Component {
                                   </span>
                                 <img
                                     className="copy__image"
-                                    onClick={this.copyUsage}
+                                    onClick={this.copyFileContents}
                                     src={clipboard}
                                     alt="Clipboard"
                                 />
