@@ -21,7 +21,7 @@ class App extends Component {
       nb: '',
       filecontent: '',
       usage: '',
-      copied: false
+      usage_copied: false
     };
   }
 
@@ -101,12 +101,12 @@ class App extends Component {
   };
 
   onCopy = () => {
-    this.setState({ copied: true }, () => {
+    this.setState({ usage_copied: true }, () => {
       if (this.timeout) {
         clearInterval(this.timeout);
       }
       this.timeout = setTimeout(() => {
-        this.setState({ copied: false });
+        this.setState({ usage_copied: false });
       }, 1000);
     });
   };
@@ -164,7 +164,7 @@ class App extends Component {
       nb,
       filecontent,
       usage,
-      copied
+      usage_copied
     } = this.state;
     const avgTypingDelay = fastType ? 0 : 50;
 
@@ -237,7 +237,7 @@ class App extends Component {
                     </pre>
                     {usage.length ? (
                       <div className="copy">
-                        <span className={`copy__popover ${copied ? 'show' : ''}`}>
+                        <span className={`copy__popover ${usage_copied ? 'show' : ''}`}>
                           command copied
                         </span>
                         <img
