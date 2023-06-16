@@ -21,7 +21,8 @@ class App extends Component {
       nb: '',
       filecontent: '',
       usage: '',
-      usage_copied: false
+      usage_copied: false,
+      filecontent_copied: false
     };
   }
 
@@ -164,7 +165,8 @@ class App extends Component {
       nb,
       filecontent,
       usage,
-      usage_copied
+      usage_copied,
+      filecontent_copied
     } = this.state;
     const avgTypingDelay = fastType ? 0 : 50;
 
@@ -270,7 +272,7 @@ class App extends Component {
                         </pre>
                           {filecontent.length ? (
                               <div className="copy_contents">
-                                  <span className={`copy_contents_popover ${copied ? 'show' : ''}`}>
+                                  <span className={`copy_contents_popover ${filecontent_copied ? 'show' : ''}`}>
                                     file contents copied
                                   </span>
                                 <img
