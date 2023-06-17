@@ -59,7 +59,7 @@ export const tertiaryOptions = {
             value: 'default-cluster-dry-run',
             label: 'as a dry run',
             usage: 'eksctl create cluster --dry-run',
-            nb: 'Prints eksctl cluster manifest yaml to stdout without creating the cluster.'
+            nb: 'Prints eksctl cluster manifest yaml to stdout \nwithout creating the cluster.'
         },
         {
             value: 'default-cluster-with-ssh',
