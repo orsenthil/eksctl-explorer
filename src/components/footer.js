@@ -15,19 +15,10 @@ const Footer = props => (
       </a>
     </div>
     <p className="footer__copyright dark-white">
-    By <a href="https://senthil.learntosolveit.com" target="_blank" rel="noopener noreferrer">Senthil Kumaran</a>{' '}
-    <span role="img" aria-label="pointer">👉</span>
-    See Also{' '}
-      <a href="https://kubectl.learntosolveit.com/" target="_blank" rel="noopener noreferrer">kubectl-explorer</a>, {' '}
-      <a href="https://aws.learntosolveit.com/" target="_blank" rel="noopener noreferrer">aws-explorer</a>, {' '} and {' '}
-      <a href="https://www.learntosolveit.com/" target="_blank" rel="noopener noreferrer">Learn To Solve it</a>
+    <a href="https://senthil.learntosolveit.com" target="_blank" rel="noopener noreferrer">Senthil Kumaran</a>{' '}
     </p>
-
     <p className="footer__copyright dark-white">
-      Thanks to{' '}
-      <a href="https://gitexplorer.com/" target="_blank" rel="noopener noreferrer"> GitExplorer</a>, and{' '}
-      <a href="https://objectexplorer.netlify.app/" target="_blank" rel="noopener noreferrer"> Javascript Object Explorer.</a>
-      <span role="img" aria-label="thank you">🙏</span> 
+        <a href="https://github.com/orsenthil/eksctl-explorer/blob/main/CREDITS.md" target="_blank" rel="noopener noreferrer">Credits.</a>
     </p>
 
   </footer>
