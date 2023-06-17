@@ -35,6 +35,44 @@ export const secondaryOptions = {
             label: 'a custom windows cluster',
         }
     ],
+    non_eksctl : [
+        {
+            value: 'non_eksctl_create',
+            label: 'create'
+        },
+        {
+            value: 'non_eksctl_get',
+            label: 'get'
+        },
+        {
+            value: 'non_eksctl_delete',
+            label: 'delete'
+        },
+        {
+            value: 'non_eksctl_upgrade',
+            label: 'upgrade'
+        },
+        {
+            value: 'non_eksctl_set_unset',
+            label: 'set/unset'
+        },
+        {
+            value: 'non_eksctl_scale',
+            label: 'scale'
+        },
+        {
+            value: 'non_eksctl_drain',
+            label: 'drain'
+        },
+        {
+            value: 'non_eksctl_enable',
+            label: 'enable'
+        },
+        {
+            value: 'non_eksctl_utils',
+            label: 'utils'
+        }
+   ],
     delete_resource : [
         {
             value: 'delete_resource_cluster',

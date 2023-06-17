@@ -24,7 +24,6 @@ export const tertiaryOptions = {
             usage: 'git clone https://github.com/weaveworks/eksctl.git\ncd eksctl\nmake install-build-deps\nmake build',
             nb: 'This will clone the latest source of eksctl and create a binary ./eksctl in the current directory.\nYou need to have a working go environment.',
         },
-
     ],
     'default-cluster': [
         {
@@ -85,6 +84,191 @@ export const tertiaryOptions = {
             usage: 'eksctl create cluster -f cluster.yaml',
             nb: 'creates a cluster using a config file.',
             filecontent: '# cluster.yaml\n# An example of ClusterConfig containing Windows and Linux node groups to support Windows workloads\napiVersion: eksctl.io/v1alpha5\nkind: ClusterConfig\nmetadata:\n  name: floral-unicorn-1686245635\n  region: us-west-2\n  version: "1.27"\nnodeGroups:\n  - name: windows-ng\n    amiFamily: WindowsServer2019FullContainer\n    minSize: 2\n    maxSize: 3\nmanagedNodeGroups:\n  - name: linux-ng\n    instanceType: t2.large\n    minSize: 2\n    maxSize: 3\n  - name: windows-managed-ng\n    amiFamily: WindowsServer2019FullContainer\n    minSize: 2\n    maxSize: 3\n',
+        }
+    ],
+    'non_eksctl_create':[
+        {
+            value: 'non_eksctl_create_nodegroup',
+            label: 'a nodegroup',
+            usage: 'eksctl create nodegroup',
+            nb: 'In order to create nodegroups or managed nodegroups\n on a cluster which was not created by eksctl,\na config file containing VPC details must be provided',
+            filecontent: '---\napiVersion: eksctl.io/v1alpha5\nkind: ClusterConfig\n\nmetadata:\n  name: non-eksctl-created-cluster\n  region: us-west-2\n\nvpc:\n  id: "vpc-12345"\n  securityGroup: "sg-12345"    # this is the ControlPlaneSecurityGroup\n  subnets:\n    private:\n      private1:\n          id: "subnet-12345"\n      private2:\n          id: "subnet-67890"\n    public:\n      public1:\n          id: "subnet-12345"\n      public2:\n          id: "subnet-67890"'
+        },
+        {
+            value: 'non_eksctl_create_fargateprofile',
+            label: 'a fargateprofile',
+            usage: 'eksctl create fargateprofile',
+        },
+        {
+            value: 'non_eksctl_create_iamserviceaccount',
+            label: 'an iamserviceaccount',
+            usage: 'eksctl create iamserviceaccount',
+        },
+        {
+            value: 'non_eksctl_create_iamidentitymapping',
+            label: 'an iamidentitymapping',
+            usage: 'eksctl create iamidentitymapping',
+        }
+    ],
+    'non_eksctl_get': [
+        {
+            value: 'non_eksctl_get_cluster',
+            label: 'get a cluster',
+            usage: 'eksctl get cluster',
+        },
+        {
+            value: 'non_eksctl_get_fargateprofile',
+            label: 'get a fargateprofile',
+            usage: 'eksctl get fargateprofile',
+        },
+        {
+            value: 'non_eksctl_get_nodegroup',
+            label: 'get a nodegroup',
+            usage: 'eksctl get nodegroup',
+        },
+        {
+            value: 'non_eksctl_label',
+            label: 'get a label',
+            usage: 'eksctl get label'
+        }
+    ],
+    'non_eksctl_delete': [
+        {
+            value: 'non_eksctl_delete_cluster',
+            label: 'delete a cluster',
+            usage: 'eksctl delete cluster',
+        },
+        {
+            value: 'non_eksctl_delete_nodegroup',
+            label: 'delete a nodegroup',
+            usage: 'eksctl delete nodegroup',
+        },
+        {
+            value: 'non_eksctl_delete_fargateprofile',
+            label: 'delete a fargateprofile',
+            usage: 'eksctl delete fargateprofile',
+        },
+        {
+            value: 'non_eksctl_delete_iamserviceaccount',
+            label: 'delete an iamserviceaccount',
+            usage: 'eksctl delete iamserviceaccount',
+        },
+        {
+            value: 'non_eksctl_delete_iamidentitymapping',
+            label: 'delete an iamidentitymapping',
+            usage: 'eksctl delete iamidentitymapping',
+        }
+    ],
+    'non_eksctl_upgrade': [
+        {
+            value: 'non_eksctl_upgrade_cluster',
+            label: 'upgrade a cluster',
+            usage: 'eksctl upgrade cluster',
+        },
+        {
+            value: 'non_eksctl_upgrade_nodegroup',
+            label: 'upgrade a nodegroup',
+            usage: 'eksctl upgrade nodegroup',
+        }
+    ],
+    'non_eksctl_set_unset': [
+        {
+            value: 'non_eksctl_set_labels',
+            label: 'set labels',
+            usage: 'eksctl set labels',
+        },
+        {
+            value: 'non_eksctl_unset_labels',
+            label: 'unset labels',
+            usage: 'eksctl unset labels',
+        }
+    ],
+    'non_eksctl_scale': [
+        {
+            value: 'non_eksctl_scale_nodegroup',
+            label: 'scale a nodegroup',
+            usage: 'eksctl scale nodegroup',
+        }
+    ],
+    'non_eksctl_drain': [
+        {
+            value: 'non_eksctl_drain_nodegroup',
+            label: 'drain a nodegroup',
+            usage: 'eksctl drain nodegroup',
+        },
+        {
+            value: 'non_eksctl_drain_nodegroup_force',
+            label: 'drain a nodegroup with force',
+            usage: 'eksctl drain nodegroup --force',
+        }
+    ],
+    'non_eksctl_enable': [
+        {
+            value: 'non_eksctl_enable_profile',
+            label: 'enable a profile',
+            usage: 'eksctl enable profile',
+        },
+        {
+            value: 'non_eksctl_enable_repo',
+            label: 'enable a repo',
+            usage: 'eksctl enable repo',
+        }
+    ],
+    'non_eksctl_utils': [
+        {
+            value: 'non_eksctl_associate_iam_oidc_provider',
+            label: 'associate an iam oidc provider',
+            usage: 'eksctl utils associate-iam-oidc-provider',
+        },
+        {
+            value: 'non_eksctl_describe_stacks',
+            label: 'describe stacks',
+            usage: 'eksctl utils describe-stacks',
+        },
+        {
+            value: 'non_eksctl_install_vpc_controllers',
+            label: 'install vpc controllers',
+            usage: 'eksctl utils install-vpc-controllers',
+        },
+        {
+            value: 'non_eksctl_nodegroup_health',
+            label: 'nodegroup health',
+            usage: 'eksctl utils nodegroup-health',
+        },
+        {
+            value: 'non_eksctl_set_public_access_cidrs',
+            label: 'set public access cidrs',
+            usage: 'eksctl utils set-public-access-cidrs',
+        },
+        {
+            value: 'non_eksctl_update_cluster_endpoints',
+            label: 'update cluster endpoints',
+            usage: 'eksctl utils update-cluster-endpoints',
+        },
+        {
+            value: 'non_eksctl_update_cluster_logging',
+            label: 'update cluster logging',
+            usage: 'eksctl utils update-cluster-logging',
+        },
+        {
+            value: 'non_eksctl_write_kubeconfig',
+            label: 'write kubeconfig',
+            usage: 'eksctl utils write-kubeconfig',
+        },
+        {
+            value: 'non_eksctl_update_coredns',
+            label: 'update coredns',
+            usage: 'eksctl utils update-coredns',
+        },
+        {
+            value: 'non_eksctl_update_aws_node',
+            label: 'update aws node',
+            usage: 'eksctl utils update-aws-node',
+        },
+        {
+            value: 'non_eksctl_update_kube_proxy',
+            label: 'update kube proxy',
+            usage: 'eksctl utils update-kube-proxy',
         }
     ],
     'addon': [

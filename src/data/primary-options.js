@@ -2,6 +2,7 @@ const options = [
     { value: 'create', label: 'create' },
     { value: 'install', label: 'install' },
     { value: 'list', label: 'list' },
+    { value: 'non_eksctl', label: 'manage non-eksctl cluster' },
     { value: 'delete_resource', label: 'delete' },
     { value: 'enable_logging', label: 'enable cloudwatch logging on my cluster' },
     { value: 'iam_oidc', label: 'create and associate IAM Open ID Connect provider' },
