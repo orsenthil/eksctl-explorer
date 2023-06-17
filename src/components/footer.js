@@ -15,10 +15,8 @@ const Footer = props => (
       </a>
     </div>
     <p className="footer__copyright dark-white">
-    <a href="https://senthil.learntosolveit.com" target="_blank" rel="noopener noreferrer">Senthil Kumaran</a>{' '}
-    </p>
-    <p className="footer__copyright dark-white">
-        <a href="https://github.com/orsenthil/eksctl-explorer/blob/main/CREDITS.md" target="_blank" rel="noopener noreferrer">Credits.</a>
+    <a href="https://senthil.learntosolveit.com" target="_blank" rel="noopener noreferrer">Senthil Kumaran</a>{' | '}
+    <a href="https://github.com/orsenthil/eksctl-explorer/blob/main/CREDITS.md" target="_blank" rel="noopener noreferrer">Credits.</a>
     </p>
 
   </footer>
