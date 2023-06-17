@@ -103,6 +103,18 @@ export const tertiaryOptions = {
             usage: 'eksctl delete cluster --name $CLUSTER_NAME',
             nb: 'Deletes a cluster and all of its resources.'
         },
+        {
+            value: 'delete-cluster-wait',
+            label: 'a cluster with all of its resources and wait for the deletion to complete',
+            usage: 'eksctl delete cluster --name $CLUSTER_NAME --wait',
+            nb: 'Deletes a cluster and all of its resources and waits for the deletion to complete.'
+        },
+        {
+            value: 'delete-cluster-disable-nodegroup-eviction',
+            label: 'a cluster with all of its resources and disable nodegroup eviction',
+            usage: 'eksctl delete cluster --name $CLUSTER_NAME --disable-nodegroup-eviction',
+            nb: 'Deletes a cluster and all of its resources and disables nodegroup eviction.'
+        }
     ],
     'fargate-profile': [
         {
