@@ -47,7 +47,7 @@ export const tertiaryOptions = {
             nb: 'Creates an EKS cluster with two managed node groups.',
             filecontent: 'apiVersion: eksctl.io/v1alpha5\nkind: ClusterConfig\n\nmetadata:\n  name: basic-cluster\n  region: eu-north-1\n\nnodeGroups:\n  - name: ng-1\n    instanceType: m5.large\n    desiredCapacity: 10\n    volumeSize: 80\n    ssh:\n      allow: true # will use ~/.ssh/id_rsa.pub as the default ssh key\n  - name: ng-2\n    instanceType: m5.xlarge\n    desiredCapacity: 2\n    volumeSize: 100\n    ssh:\n      publicKeyPath: ~/.ssh/ec2_id_rsa.pub'
 
-        }
+        },
         {
             value: 'default-cluster-dry-run',
             label: 'as a dry run',
