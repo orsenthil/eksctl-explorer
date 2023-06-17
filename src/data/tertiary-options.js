@@ -49,6 +49,13 @@ export const tertiaryOptions = {
 
         },
         {
+            value: 'cluster-existing-vpc',
+            label: 'Config file with existing VPC',
+            usage: 'eksctl create cluster -f cluster.yaml',
+            nb: 'Creates an EKS cluster with existing VPC',
+            filecontent: 'apiVersion: eksctl.io/v1alpha5\nkind: ClusterConfig\n\nmetadata:\n  name: cluster-in-existing-vpc\n  region: eu-north-1\n\nvpc:\n  subnets:\n    private:\n      eu-north-1a: { id: subnet-0ff156e0c4a6d300c }\n      eu-north-1b: { id: subnet-0549cdab573695c03 }\n      eu-north-1c: { id: subnet-0426fb4a607393184 }\n\nnodeGroups:\n  - name: ng-1-workers\n    labels: { role: workers }\n    instanceType: m5.xlarge\n    desiredCapacity: 3\n    privateNetworking: true\n  - name: ng-2-builders\n    labels: { role: builders }\n    instanceType: m5.2xlarge\n    desiredCapacity: 2\n    privateNetworking: true\n    iam:\n      withAddonPolicies:\n        imageBuilder: true'
+        },
+        {
             value: 'default-cluster-dry-run',
             label: 'as a dry run',
             usage: 'eksctl create cluster --dry-run',
