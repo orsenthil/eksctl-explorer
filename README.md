@@ -5,7 +5,7 @@ It makes Kubernetes, Elastic Kubernetes Service and AWS Concepts accessible.
 
 This project, `eksctl-explorer`, creates a website [https://eksctl.learntosolveit.com](https://eksctl.learntosolveit.com) that gives eksctl commands for cluster management operations.
 
-### Built on top of
+### Credits
 
 * [Sarah Drasner's array explorer](https://github.com/sdras/array-explorer).
 * [Summitech Git Explorer](https://gitexplorer.com)
