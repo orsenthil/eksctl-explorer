@@ -34,6 +34,13 @@ export const tertiaryOptions = {
             nb: 'Creates an EKS cluster with two managed nodes.\n\nKubernetes API endpoint access will use default of {publicAccess=true, privateAccess=false} for cluster.\n\nCloudWatch logging is not enabled.'
         },
         {
+            value: 'default-cluster-with-config-file',
+            label: 'with config file',
+            usage: 'eksctl create cluster -f cluster.yaml',
+            nb: 'Creates an EKS cluster with two managed nodes.\n\nKubernetes API endpoint access will use default of {publicAccess=true, privateAccess=false} for cluster.\n\nCloudWatch logging is not enabled.',
+            filecontent: 'apiVersion: eksctl.io/v1alpha5\nkind: ClusterConfig\n\nmetadata:\n  name: basic-cluster\n  region: eu-north-1\n\nnodeGroups:\n  - name: ng-1\n    instanceType: m5.large\n    desiredCapacity: 10\n  - name: ng-2\n    instanceType: m5.xlarge\n    desiredCapacity: 2'
+        },
+        {
             value: 'default-cluster-dry-run',
             label: 'as a dry run',
             usage: 'eksctl create cluster --dry-run',

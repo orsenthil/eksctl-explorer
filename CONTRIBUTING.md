@@ -85,3 +85,13 @@ show: [
 ### Yaml to string content
 
 cat windows-ng.yaml | yq eval  | awk '{printf "%s\\n", $0}'
+
+
+### Line Joiners
+
+sed -e :a -e '$!N;s/\n/\\\n/;ta' file
+
+### GNU Sed
+
+sed -e :a -e '$!N;s/\n/\\n/;ta' file
+
