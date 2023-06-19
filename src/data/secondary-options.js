@@ -35,6 +35,15 @@ export const secondaryOptions = {
             label: 'a custom windows cluster',
         }
     ],
+    register : [
+        {
+            value: 'register-eks',
+            label: 'an eks cluster',
+            usage: 'eksctl register cluster $CLUSTER_NAME --name --provider $PROVIDER',
+            nb: 'Register a non EKS cluster, including those hosted on other cloud providers, via EKS Connector.\n\nhttps://docs.aws.amazon.com/eks/latest/userguide/eks-connector.html',
+
+        }
+   ],
     non_eksctl : [
         {
             value: 'non_eksctl_create',
