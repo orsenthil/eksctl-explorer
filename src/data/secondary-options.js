@@ -33,6 +33,10 @@ export const secondaryOptions = {
         {
             value: 'custom-windows-cluster',
             label: 'a custom windows cluster',
+        },
+        {
+            value: 'custom-kubelet-configuration',
+            label: 'a custom kubelet configuration',
         }
     ],
     register : [

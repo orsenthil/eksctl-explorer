@@ -84,6 +84,13 @@ export const tertiaryOptions = {
             usage: 'eksctl create cluster -f cluster.yaml',
             nb: 'creates a cluster using a config file.',
             filecontent: '# cluster.yaml\n# An example of ClusterConfig containing Windows and Linux node groups to support Windows workloads\napiVersion: eksctl.io/v1alpha5\nkind: ClusterConfig\nmetadata:\n  name: floral-unicorn-1686245635\n  region: us-west-2\n  version: "1.27"\nnodeGroups:\n  - name: windows-ng\n    amiFamily: WindowsServer2019FullContainer\n    minSize: 2\n    maxSize: 3\nmanagedNodeGroups:\n  - name: linux-ng\n    instanceType: t2.large\n    minSize: 2\n    maxSize: 3\n  - name: windows-managed-ng\n    amiFamily: WindowsServer2019FullContainer\n    minSize: 2\n    maxSize: 3\n',
+        },
+        {
+            value: 'custom-kubelet-configuration',
+            label: 'custom kubelet configuration',
+            usage: 'eksctl create cluster -f cluster.yaml',
+            nb: 'Config files can include the kubeletExtraConfig field which accepts a free form\nyaml that will be embedded into the kubelet.yaml.\nThe values specified in the config file for the the fields in\nkubeletExtraconfig will completely overwrite the default values specified by\neksctl.',
+            filecontent: 'apiVersion: eksctl.io/v1alpha5\nkind: ClusterConfig\n\nmetadata:\n  name: dev-cluster-1\n  region: eu-north-1\n\nnodeGroups:\n  - name: ng-1\n    instanceType: m5a.xlarge\n    desiredCapacity: 1\n    kubeletExtraConfig:\n      kubeReserved:\n        cpu: "300m"\n        memory: "300Mi"\n        ephemeral-storage: "1Gi"\n      kubeReservedCgroup: "/kube-reserved"\n      systemReserved:\n        cpu: "300m"\n        memory: "300Mi"\n        ephemeral-storage: "1Gi"\n      evictionHard:\n        memory.available:  "200Mi"\n        nodefs.available: "10%"\n      featureGates:\n        RotateKubeletServerCertificate: true # has to be enabled, otherwise it will be disabled'
         }
     ],
     'non_eksctl_create':[
