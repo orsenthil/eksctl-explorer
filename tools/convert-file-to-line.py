@@ -1,7 +1,7 @@
-import json
+import os
 
 
-with open('f1.yaml') as f:
+with open("/Users/senthilx/cluster.yaml") as f:
     data = f.readlines()
 
 print(repr("".join(data)))
