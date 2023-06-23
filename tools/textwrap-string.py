@@ -2,9 +2,15 @@ import textwrap
 
 
 
-msg = """CloudWatch logging for EKS control plane is not enabled by default due to data ingestion and storage costs.
-To enable control plane logging when cluster is created, you will need to define cloudWatch.clusterLogging.enableTypes setting in your ClusterConfig.
+msg = """
+Creates an EKS cluster with five managed nodes.
+Kubernetes API endpoint access will use default of {publicAccess=true, privateAccess=false} for cluster.
+CloudWatch logging is not enabled.
+SSH access is enabled for the cluster.
+OIDC is enabled for the cluster.
+eksctl-managed nodegroups are enabled for the cluster. A custom node type of c5.xlarge is used.
 """
+
 
 
 print(repr("\n".join(textwrap.wrap(msg, width=60))))
