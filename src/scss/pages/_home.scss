@@ -191,12 +191,17 @@
         .Typist {
           font-weight: normal;
         }
-        .Wrap {
-          white-space: pre-wrap;
-          white-space: -moz-pre-wrap;
-          white-space: -o-pre-wrap;
-          word-wrap: break-word;
-        }
+      }
+
+      &--3 {
+        width: 100px;
+        border: 1px solid green;
+        padding: 10px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
       }
 
       &__group {
