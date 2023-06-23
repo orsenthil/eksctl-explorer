@@ -105,6 +105,13 @@ export const tertiaryOptions = {
             usage: 'eksctl create cluster -f cluster.yaml',
             nb: 'CloudWatch logging for EKS control plane is not enabled by\ndefault due to data ingestion and storage costs. To enable\ncontrol plane logging when cluster is created, you will need\nto define cloudWatch.clusterLogging.enableTypes setting in\nyour ClusterConfig.',
             filecontent: '# A simple example of ClusterConfig object:\n---\napiVersion: eksctl.io/v1alpha5\nkind: ClusterConfig\n\nmetadata:\n  name: cluster-1\n  region: eu-north-1\n\nnodeGroups:\n  - name: ng-1\n    instanceType: m5.large\n    desiredCapacity: 1\n\ncloudWatch:\n    clusterLogging:\n        # enable specific types of cluster control plane logs\n        enableTypes: ["audit", "authenticator", "controllerManager"]\n        # all supported types: "api", "audit", "authenticator", "controllerManager", "scheduler"\n        # supported special values: "*" and "all"\n'
+        },
+        {
+            value: 'custom-cluster-with-vpc-cidr-auto-ipv6-no-nodes',
+            label: 'custom cluster with vpc cidr auto ipv6 no nodes',
+            usage: 'eksctl create cluster -f cluster.yaml',
+            nb: 'Custom VPC IPv4 CIDR, and auto-allocated IPv6 CIDRs for all subnets; also without any node groups',
+            filecontent: '# An example of ClusterConfig object with custom VPC IPv4 CIDR,\n# and auto-allocated IPv6 CIDRs for all subnets; also without\n# any nodegroups:\n---\napiVersion: eksctl.io/v1alpha5\nkind: ClusterConfig\n\nmetadata:\n  name: cluster-2\n  region: us-west-2\n\nvpc:\n  cidr: 10.10.0.0/16\n  autoAllocateIPv6: true\n  hostnameType: resource-name\n  # disable public access to endpoint and only allow private access\n  clusterEndpoints:\n    publicAccess: false\n    privateAccess: true\n\nnodeGroups: []\n'
         }
     ],
     'non_eksctl_create':[
