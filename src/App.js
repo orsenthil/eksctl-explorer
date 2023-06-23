@@ -267,7 +267,9 @@ class App extends Component {
                       <h2 className="board__title  dark-white">Note</h2>
                       <div className="board board--2">
                         <pre>
+                          <Typist avgTypingDelay="0" cursor={{ show: false }}>
                             {nb}
+                          </Typist>
                         </pre>
                       </div>
                     </div>
