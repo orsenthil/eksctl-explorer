@@ -195,13 +195,15 @@
 
       &--3 {
         width: 100px;
-        border: 1px solid green;
         padding: 10px;
         word-wrap: break-word;
         overflow-wrap: break-word;
         -webkit-hyphens: auto;
         -ms-hyphens: auto;
         hyphens: auto;
+        color: $color-white;
+        letter-spacing: 1px;
+        font-weight: 600;
       }
 
       &__group {
