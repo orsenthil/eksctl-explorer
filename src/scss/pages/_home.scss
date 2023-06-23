@@ -191,6 +191,12 @@
         .Typist {
           font-weight: normal;
         }
+        .Wrap {
+          white-space: pre-wrap;
+          white-space: -moz-pre-wrap;
+          white-space: -o-pre-wrap;
+          word-wrap: break-word;
+        }
       }
 
       &__group {
