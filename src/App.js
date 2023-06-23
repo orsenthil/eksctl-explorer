@@ -265,9 +265,11 @@ class App extends Component {
                   {nb ? (
                     <div className="board__group board__group--2">
                       <h2 className="board__title  dark-white">Note</h2>
-                      <div className="board board--3">
-                            {nb}
-                      </div>
+                      <pre>
+                        <div className="board board--3">
+                              {nb}
+                        </div>
+                      </pre>
                     </div>
                   ) : null}
 
