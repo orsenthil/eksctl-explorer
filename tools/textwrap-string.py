@@ -3,14 +3,11 @@ import textwrap
 
 
 msg = """
-Creates an EKS cluster with five managed nodes.
-Kubernetes API endpoint access will use default of {publicAccess=true, privateAccess=false} for cluster.
-CloudWatch logging is not enabled.
-SSH access is enabled for the cluster.
-OIDC is enabled for the cluster.
-eksctl-managed nodegroups are enabled for the cluster. A custom node type of c5.xlarge is used.
+An example ClusterConfig that creates a fully-private cluster on AWS Outposts.
+Since the VPC will be created by eksctl, it will lack connectivity to the API server because eksctl does not
+associate the VPC with the local gateway. Therefore, the command must be run with `--without-nodegroup`, as in
+`eksctl create cluster -f examples/37-outposts.yaml --without-nodegroup`, and the nodegroups can be created after
+ensuring connectivity to the API server.
 """
-
-
 
 print(repr("\n".join(textwrap.wrap(msg, width=60))))
