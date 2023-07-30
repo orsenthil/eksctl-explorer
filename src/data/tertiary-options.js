@@ -77,7 +77,9 @@ export const tertiaryOptions = {
             label: 'customized 5 node cluster',
             usage: 'eksctl create cluster --name $USER-$(date +%d%b) --version 1.27 --region us-west-2 --with-oidc --ssh-access --nodegroup-name standard-workers --node-type c5.xlarge --nodes 5 --nodes-min 1 --nodes-max 5 --auto-kubeconfig',
             nb: ' Creates an EKS cluster with five managed nodes. Kubernetes\nAPI endpoint access will use default of {publicAccess=true,\nprivateAccess=false} for cluster. CloudWatch logging is not\nenabled. SSH access is enabled for the cluster. OIDC is\nenabled for the cluster. eksctl-managed nodegroups are\nenabled for the cluster. A custom node type of c5.xlarge is\nused.'
-        },
+        }
+   ],
+    'custom-cluster-configuration': [
         {
             value: 'custom-windows-cluster-option',
             label: 'windows cluster using a config.',

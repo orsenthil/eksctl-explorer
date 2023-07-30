@@ -11,6 +11,10 @@ export const secondaryOptions = {
             label: 'a cluster',
         },
         {
+            value: 'custom-cluster-configuration',
+            label: 'a custom cluster with configuration file.',
+        },
+        {
             value: 'addon',
             label: 'an addon',
         },
