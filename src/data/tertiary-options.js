@@ -75,7 +75,7 @@ export const tertiaryOptions = {
         {
             value: 'default-cluster-with-5-nodes-ssh-access-and-oidc-and-eksctl-managed-nodegroups',
             label: 'customized 5 node cluster',
-            usage: 'eksctl create cluster --name $USER-$(date +%d%b) --version 1.27 --region us-west-2 --with-oidc --ssh-access --nodegroup-name standard-workers --node-type c5.xlarge --nodes 5 --nodes-min 1 --nodes-max 5 --auto-kubeconfig',
+            usage: 'eksctl create cluster --name $USER-$(date +%d%b) --version 1.28 --region us-west-2 --with-oidc --ssh-access --nodegroup-name standard-workers --node-type c5.xlarge --nodes 5 --nodes-min 1 --nodes-max 5 --auto-kubeconfig',
             nb: ' Creates an EKS cluster with five managed nodes. Kubernetes\nAPI endpoint access will use default of {publicAccess=true,\nprivateAccess=false} for cluster. CloudWatch logging is not\nenabled. SSH access is enabled for the cluster. OIDC is\nenabled for the cluster. eksctl-managed nodegroups are\nenabled for the cluster. A custom node type of c5.xlarge is\nused.'
         }
    ],
@@ -85,7 +85,7 @@ export const tertiaryOptions = {
             label: 'windows cluster using a config.',
             usage: 'eksctl create cluster -f cluster.yaml',
             nb: 'creates a cluster using a config file.',
-            filecontent: '# cluster.yaml\n# An example of ClusterConfig containing Windows and Linux node groups to support Windows workloads\napiVersion: eksctl.io/v1alpha5\nkind: ClusterConfig\nmetadata:\n  name: floral-unicorn-1686245635\n  region: us-west-2\n  version: "1.27"\nnodeGroups:\n  - name: windows-ng\n    amiFamily: WindowsServer2019FullContainer\n    minSize: 2\n    maxSize: 3\nmanagedNodeGroups:\n  - name: linux-ng\n    instanceType: t2.large\n    minSize: 2\n    maxSize: 3\n  - name: windows-managed-ng\n    amiFamily: WindowsServer2019FullContainer\n    minSize: 2\n    maxSize: 3\n',
+            filecontent: '# cluster.yaml\n# An example of ClusterConfig containing Windows and Linux node groups to support Windows workloads\napiVersion: eksctl.io/v1alpha5\nkind: ClusterConfig\nmetadata:\n  name: floral-unicorn-1686245635\n  region: us-west-2\n  version: "1.28"\nnodeGroups:\n  - name: windows-ng\n    amiFamily: WindowsServer2019FullContainer\n    minSize: 2\n    maxSize: 3\nmanagedNodeGroups:\n  - name: linux-ng\n    instanceType: t2.large\n    minSize: 2\n    maxSize: 3\n  - name: windows-managed-ng\n    amiFamily: WindowsServer2019FullContainer\n    minSize: 2\n    maxSize: 3\n',
         },
         {
             value: 'custom-kubelet-configuration',
@@ -353,7 +353,7 @@ export const tertiaryOptions = {
             label: 'cluster-configuration-with-required-iam-policies-for-aws-cni',
             usage: 'eksctl create cluster -f cluster.yaml',
             nb: 'An example ClusterConfig that creates a cluster with the required IAM policies for AWS VPC CNI.',
-            filecontent: 'apiVersion: eksctl.io/v1alpha5\nkind: ClusterConfig\nmetadata:\n  name: cluster-to-test-cni\n  region: us-west-2\n  version: "1.27"\nkubernetesNetworkConfig:\n  ipFamily: IPv4\nnodeGroups: []\nmanagedNodeGroups:\n- name: linux-ng\n  instanceType: c5.xlarge\n  desiredCapacity: 1\n  amiFamily: AmazonLinux2\n  disableIMDSv1: true\n  disablePodIMDS: true\n  ssh:\n    enableSsm: true\n  iam:\n    attachPolicyARNs:\n    - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy\n    - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy\n    - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly\n    - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore\n- name: windows-ng\n  instanceType: c5.xlarge\n  desiredCapacity: 1\n  amiFamily: WindowsServer2019CoreContainer\n  disableIMDSv1: true\n  disablePodIMDS: true\n  ssh:\n    enableSsm: true\n  iam:\n    attachPolicyARNs:\n    - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy\n    - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy\n    - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly\n    - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore\naddons: []\niam:\n  withOIDC: true\n'
+            filecontent: 'apiVersion: eksctl.io/v1alpha5\nkind: ClusterConfig\nmetadata:\n  name: cluster-to-test-cni\n  region: us-west-2\n  version: "1.28"\nkubernetesNetworkConfig:\n  ipFamily: IPv4\nnodeGroups: []\nmanagedNodeGroups:\n- name: linux-ng\n  instanceType: c5.xlarge\n  desiredCapacity: 1\n  amiFamily: AmazonLinux2\n  disableIMDSv1: true\n  disablePodIMDS: true\n  ssh:\n    enableSsm: true\n  iam:\n    attachPolicyARNs:\n    - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy\n    - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy\n    - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly\n    - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore\n- name: windows-ng\n  instanceType: c5.xlarge\n  desiredCapacity: 1\n  amiFamily: WindowsServer2019CoreContainer\n  disableIMDSv1: true\n  disablePodIMDS: true\n  ssh:\n    enableSsm: true\n  iam:\n    attachPolicyARNs:\n    - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy\n    - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy\n    - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly\n    - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore\naddons: []\niam:\n  withOIDC: true\n'
         }
     ],
     'non_eksctl_create':[
